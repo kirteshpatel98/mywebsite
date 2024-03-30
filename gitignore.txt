@@ -1,2 +1,4 @@
 __pycache__
 .DS_Store
+namecheap_private_ssh_key.ppk
+mywebsite/
