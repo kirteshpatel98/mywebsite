@@ -1,10 +1,13 @@
+
 import streamlit as st
 import streamlit.components.v1 as components
 from constant import *
 
 # page config ----------------------------------------------------------------
-st.set_page_config(page_title="Portofolio", page_icon="🎨", layout="wide")
-st.header("🎨 Portfolio",divider='rainbow')
+st.set_page_config(page_title="Portofolio", page_icon="🚀", layout="wide")
+st.header("🚀 Portfolio",divider='rainbow')
+
+'''
 
 # page functions ----------------------------------------------------------------
 def Portfolio_component(header, content):
@@ -40,3 +43,5 @@ st.link_button("Go to :blue[Source Code]", "https://github.com/Rsirp0c/desktop_c
 Portfolio_component(Portfolio[4][0], Portfolio[4][1])
 
 components.iframe(StoryMap_iframe, width=1000, height=700, scrolling=True)
+
+'''

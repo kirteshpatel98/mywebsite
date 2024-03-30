@@ -59,6 +59,8 @@ with col1:
 with col3:
     st.image("src/kirtesh.jpg", width=300)
 
+'''
+
 # skills --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 st.subheader("My :blue[skills] ⚒️",divider='rainbow') #,divider='rainbow'
 
@@ -76,3 +78,5 @@ def skill_tab():
                 break
 with st.spinner(text="Loading section..."):
     skill_tab()
+
+'''
