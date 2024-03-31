@@ -35,18 +35,6 @@ with col1:
     st.markdown(f"###### 📚 Interests: ML, AI, Data Science, NLP, Cloud")
     st.markdown(f"###### ⚽ Hobbies: Cycling, Football, Adventure Sports")
 
-
-
-    # Display image with hyperlink
-    col1, col2 = st.columns([3, 14])
-    with col1:
-        st.markdown("""<a href="https://www.linkedin.com/in/kirtesh-patel-09997a180/"><img src="data:image/png;base64,{}" width="50"></a>""".format(base64.b64encode(open("./icons/linkedin.png", "rb").read()).decode()),unsafe_allow_html=True,)
-    with col2:
-        st.markdown("""<a href="https://github.com/kirteshpatel98"><img src="data:image/png;base64,{}" width="50" ></a>""".format(base64.b64encode(open("./icons/github.png", "rb").read()).decode()),unsafe_allow_html=True,)
-    
-
-
-    
     with open("src/resume.pdf", "rb") as file:
         pdf_file = file.read()
 
@@ -80,3 +68,26 @@ with st.spinner(text="Loading section..."):
     skill_tab()
 
 '''
+
+st.sidebar.markdown('Contact')
+
+# Add columns to the sidebar
+col1, col2, col3= st.sidebar.columns(3)
+
+# Add content to the first column
+with col1:
+    st.markdown("""<a href="https://www.linkedin.com/in/kirtesh-patel-09997a180/"><img src="data:image/png;base64,{}" width="35"></a>""".format(base64.b64encode(open("./icons/linkedin1.png", "rb").read()).decode()),unsafe_allow_html=True,)
+
+# Add content to the second column
+with col3:
+    st.markdown("""<a href="https://github.com/kirteshpatel98"><img src="data:image/png;base64,{}" width="35" ></a>""".format(base64.b64encode(open("./icons/github.png", "rb").read()).decode()),unsafe_allow_html=True,)
+
+with col2:
+    st.markdown("""<a href="mailto:kirteshpatel98@gmail.com"><img src="data:image/png;base64,{}" width="35" ></a>""".format(base64.b64encode(open("./icons/gmail1.png", "rb").read()).decode()),unsafe_allow_html=True,)
+
+
+
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("© 2024 Kirtesh Patel. All rights reserved.")
+
