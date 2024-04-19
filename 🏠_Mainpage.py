@@ -2,8 +2,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 from constant import *
 import base64
-
-st.set_page_config(page_title="Main Page", page_icon="🏠", layout="wide") 
+from PIL import Image
+im = Image.open("icons/shark_git1.png")
+st.set_page_config(page_title="Main Page", page_icon=im, layout="wide") 
 
 #sidebar --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 with st.sidebar:
@@ -49,29 +50,47 @@ with col3:
 
 
 # skills --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-skills1=['Python','PyTorch','github','Paperspace','Pandas','AWS','PowerBI','Keras','TensorFlow','MATLAB','MySQL','Transformers (Hugging Face)','Streamlit','Django','shell','R-programming','Microsoft 365']
+skills_programing=['Python','MATLAB','MySQL','shell','R-programming']
+skills_python_framework=['PyTorch','Pandas','Keras','TensorFlow','Transformers (Hugging Face)','Streamlit','Django']
+skills_tools=['github','Paperspace','AWS','PowerBI','shell','Microsoft 365']
+
 # skills1=['Python','PyTorch']
 
 st.subheader("My :blue[skills] ⚒️",divider='rainbow') #,divider='rainbow'
 
+
+# skills function
 def skill_tab(skills1):
-    rows,cols = len(skills1)//skill_col_size, skill_col_size
-    skills = iter(skills1)
-    if len(skills1)%skill_col_size!=0:
-        rows+=1
-    for x in range(rows):
-        columns = st.columns(skill_col_size)
-        for index_ in range(skill_col_size):
-            try:
-                # columns[index_].button(next(skills))
-                # columns[index_].markdown(f"{next(skills)}")
-                sk=next(skills)
-                columns[index_].image(f"./icons/{sk}.png", caption=f"{sk}",width=60)
-                
-            except:
-                break
-with st.spinner(text="Loading section..."):
-    skill_tab(skills1)
+        rows,cols = len(skills1)//skill_col_size, skill_col_size
+        skills = iter(skills1)
+        if len(skills1)%skill_col_size!=0:
+            rows+=1
+        for x in range(rows):
+            columns = st.columns(skill_col_size)
+            for index_ in range(skill_col_size):
+                try:
+                    # columns[index_].button(next(skills))
+                    # columns[index_].markdown(f"{next(skills)}")
+                    sk=next(skills)
+                    columns[index_].image(f"./icons/{sk}.png", caption=f"{sk}",width=60)
+                    
+                except:
+                    break
+
+# skills tab
+tab1, tab2, tab3 = st.tabs(["Programming Lang.", "Frameworks","Tools and Softwares"])
+with tab1:
+    with st.spinner(text="Loading section..."):
+        skill_tab(skills_programing)
+with tab2:
+    with st.spinner(text="Loading section..."):
+        skill_tab(skills_python_framework)
+
+with tab3:
+    with st.spinner(text="Loading section..."):
+        skill_tab(skills_tools)
+
+
 
 
 

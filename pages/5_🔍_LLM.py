@@ -1,7 +1,11 @@
 import streamlit as st 
 from constant import *
 import base64
-st.set_page_config(page_title="LLM", page_icon="🔍") #layout="wide"
+from PIL import Image
+
+im = Image.open("icons/shark_git1.png")
+
+st.set_page_config(page_title="LLM", page_icon=im) #layout="wide"
 
 st.markdown(f"#### LLM search coming soon")   
 

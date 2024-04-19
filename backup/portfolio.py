@@ -59,3 +59,48 @@ with tab2:
 
 st.link_button("GitHub", "https://github.com/neelblabla/large_language_models_for_processing_emails")
 
+
+'''
+# Data VIS in D3.js --------------------------------------------------------------
+Portfolio_component(Portfolio[2][0], Portfolio[2][1])
+
+st.link_button("Go to Github", "https://github.com/Rsirp0c/D3-practice")
+st.image("src/Screenshot-2.png", width=800)
+with st.expander("See more"):
+   st.image("src/Screenshot-1.png", width=800)
+   st.image("src/Screenshot-3.png", width=800)
+   st.image("src/Screenshot-4.png", width=800)
+
+# Desktop ChatApp -------------------------------------------------------------- 
+Portfolio_component(Portfolio[3][0], Portfolio[3][1])
+
+st.link_button("Go to :blue[Source Code]", "https://github.com/Rsirp0c/desktop_chatapp")
+
+# Anthropology Research Project -----------------------------------------------------------
+Portfolio_component(Portfolio[4][0], Portfolio[4][1])
+
+components.iframe("https://1drv.ms/b/s!AoiE7xOoBAsngs875jVpU6OUw0fqKA?e=3YvUm6", width=1000, height=700, scrolling=True)
+
+
+
+st.sidebar.markdown('Contact')
+
+col1, col2, col3= st.sidebar.columns(3)
+
+# Add content to the first column
+with col1:
+    st.markdown("""<a href="https://www.linkedin.com/in/kirtesh-patel-09997a180/"><img src="data:image/png;base64,{}" width="35"></a>""".format(base64.b64encode(open("./icons/linkedin1.png", "rb").read()).decode()),unsafe_allow_html=True,)
+
+# Add content to the second column
+with col3:
+    st.markdown("""<a href="https://github.com/kirteshpatel98"><img src="data:image/png;base64,{}" width="35" ></a>""".format(base64.b64encode(open("./icons/github.png", "rb").read()).decode()),unsafe_allow_html=True,)
+
+with col2:
+    st.markdown("""<a href="mailto:kirteshpatel98@gmail.com"><img src="data:image/png;base64,{}" width="35" ></a>""".format(base64.b64encode(open("./icons/gmail1.png", "rb").read()).decode()),unsafe_allow_html=True,)
+
+
+
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("© 2024 Kirtesh Patel. All rights reserved.")
+'''

@@ -2,8 +2,10 @@ import streamlit as st
 import streamlit.components.v1 as components
 from constant import *
 import base64
+from PIL import Image
 
-st.set_page_config(page_title="Experience", page_icon="📚", layout="wide")
+im = Image.open("icons/shark_git1.png")
+st.set_page_config(page_title="Experience", page_icon=im, layout="wide")
 st.header("🤵 Experience",divider='rainbow')
 st.write("")
 
